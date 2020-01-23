@@ -1,0 +1,58 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ecbs_dbg",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ecbs",
+            "args": [
+                "-i",
+                "${workspaceFolder}/benchmark/8x8_obst12/map_8by8_obst12_agents11_ex0.yaml",
+                "-o",
+                "ecbs_output.yaml",
+                "-w",
+                "1.3"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "cbs_dbg",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/cbs",
+            "args": [
+                "-i",
+                "${workspaceFolder}/benchmark/8x8_obst12/map_8by8_obst12_agents11_ex0.yaml",
+                "-o",
+                "cbs_output.yaml"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
